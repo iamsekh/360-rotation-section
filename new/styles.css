@@ -1,0 +1,271 @@
+
+    .info h2 {
+        margin-bottom: 16px;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+
+    .info p {
+        max-width: 75%;
+        margin: auto;
+        line-height: 150%;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+
+    .info img {
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+
+    .slide.active .info h2,
+    .slide.active .info p,
+    .slide.active .info img {
+        opacity: 1;
+    }
+
+    body {
+        background: #EBF5FF;
+    }
+
+    .circle-carousel .pagination .dot:hover {
+        scale: 1.2;
+        transition: 0.5s ease-in-out;
+    }
+
+    .circle-carousel .pagination .dot {
+        transition: 0.5s ease-in-out !important;
+        scale: 1;
+    }
+
+    .prev img {
+        position: relative;
+        left: -4px;
+        right: 0;
+        top: 48.6%;
+        width: 12px;
+    }
+
+    .circle-carousel .next:hover:before {
+        background: #ADD4FF;
+        color: #fff;
+    }
+
+    .circle-carousel .prev:hover:before {
+        background: #ADD4FF;
+    }
+
+    .next img {
+        position: relative;
+        left: 4px;
+        right: 0;
+        top: 48.6%;
+        width: 12px;
+    }
+
+    .mobile {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 28px;
+    }
+
+    .mobile img {
+        width: 45%;
+        position: relative;
+        top: -56px;
+        transition: opacity 1s ease-in-out;
+    }
+
+    .item.active img {
+        width: 64px;
+    }
+
+    .info h2 {
+        margin-bottom: 16px;
+    }
+
+    .info p {
+        max-width: 75%;
+        margin: auto;
+        line-height: 150%;
+    }
+
+    .info {
+        text-align: center;
+        font-family: "Work Sans", sans-serif;
+    }
+
+    .slides h2 {
+        font-size: 32px;
+        font-weight: 700;
+        margin-top: -190px;
+        color: #0057B7;
+    }
+
+    .page {
+        min-height: 100vh;
+        overflow: hidden;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .circle-carousel {
+        position: relative;
+        padding-top: 100%;
+        border-radius: 50%;
+        top: 72px;
+        background: linear-gradient(180deg, #ADD4FF 0%, #DCF5EF 52.59%);
+    }
+
+    .circle-carousel .slides {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .circle-carousel .slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        opacity: 0;
+    }
+
+    .circle-carousel .slide.active {
+        z-index: 1;
+        opacity: 1;
+    }
+
+    .circle-carousel .pagination {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        transition-property: transform;
+        transition-timing-function: ease-out;
+        pointer-events: none;
+        user-select: none;
+    }
+
+    .circle-carousel .pagination .dot {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        pointer-events: auto;
+        background: #fff;
+    }
+
+    .circle-carousel .pagination .dot:hover {
+        transform: translate(-50%, -50%) scale(1.05);
+        cursor: pointer;
+        background: white;
+        color: black;
+    }
+
+    .circle-carousel .pagination .item.active .dot:hover {
+        scale: 1;
+    }
+
+    .circle-carousel .pagination .item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+
+    .circle-carousel .pagination .item.active .dot {
+        background: white;
+        width: 120px;
+        height: 120px;
+        transition: 1.5s !important;
+        background: linear-gradient(#fff 0 0) padding-box, linear-gradient(to right, #ADD4FF, #DCF5EF) border-box;
+        border: 3.5px solid transparent;
+        border-radius: 50%;
+    }
+
+    .circle-carousel .next,
+    .circle-carousel .prev {
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        z-index: 1;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.3em;
+        transition: 0.3s;
+        user-select: none;
+    }
+
+    .circle-carousel .next:before,
+    .circle-carousel .prev:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        z-index: -1;
+        transform: translate(-50%, -50%);
+        border-style: solid;
+        border-color: #5EA6F5;
+        border-radius: 8px;
+        transition: 0.3s;
+    }
+
+    .circle-carousel .next:hover,
+    .circle-carousel .prev:hover {
+        cursor: pointer;
+        color: black;
+    }
+
+    .circle-carousel .next:hover:before,
+    .circle-carousel .prev:hover:before {
+        border-color: #0057B7;
+        transform: translate(-50%, -50%) scale(1.05);
+    }
+
+    .circle-carousel .next {
+        right: -32%;
+    }
+
+    .circle-carousel .next:before {
+        left: 65%;
+        border-width: 0;
+        background: white;
+        padding: 32px;
+        border-radius: 50%;
+    }
+
+    .circle-carousel .prev {
+        left: -32%;
+    }
+
+    .circle-carousel .prev:before {
+        left: 35%;
+        border-width: 0;
+        background: white;
+        padding: 32px;
+        border-radius: 50%;
+    }
